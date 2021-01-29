@@ -1,3 +1,4 @@
 [0819/223200.167:ERROR:process_reader_win.cc(127)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
 [0819/223200.167:ERROR:exception_snapshot_win.cc(99)] thread ID 7948 not found in process
 [1019/185306.379:ERROR:settings.cc(430)] Settings version is not 5
+nitin
