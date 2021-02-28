@@ -1,0 +1,67 @@
+Testing Next geneartion framework. Generally used for unti testing but
+Automation engineers also use it.
+available in form of JAR files. - also used Java unit testing framework
+
+--good html reports
+--good annotations
+--can define priorities/sequence fo test cases , its good feature
+--can define dependencies of test cases
+--can define grouping of test cases
+--most important is data provider feature/parametrization-- very importNT-also interview 
+question
+--also called TDD framework/heps in desiging test cases initaily with development
+
+
+--Never write main method in TestNG. testNG will automatically execute the main method
+by itself
+
+Annotations:
+--Each Annotation should be associated with at least one method
+@BeforeSuite
+@BeforeTest
+@BeforeClass
+@BeforeMethod
+@Test
+@AfterMethod
+@AfterClass
+@AfterTest
+@AfterSuite
+
+--We can define priority of test cases by using keyword for eg (priority=1)
+in @Test Annotation
+--We can also define groups of test cases as in example below
+	@Test(priority=3, groups="Title")
+	public void gettitle() {
+		String title = driver.getTitle();
+		System.out.println(title);
+	}
+--So after running above tests teh result report will segregate the results accordoing
+to groups which will be easier to read
+
+--Creating Dependencies
+	for example we are testing a website and first test case is login test case
+	it means all other test cases are dependent on login test case. 
+
+
+-----------------------------------------------------------------------------
+-- Data Driven from different sources(different sources used generally as below):
+> Excel files- Test Data
+> Properties file- Env variables or Test Data
+> XML files- Env variables
+> JSON files
+> DB etc
+
+---------------------------------------------------------------------------
+
+@Parameters:
+By this we pass on global variables or environment variables to the scrpt.
+These are variables which don't change and remain constant.
+like for eg- which browser to use,
+which website to test.(url of website)
+which test environment to use(name of env we can choose from environemnt variables)
+--These variables are passed through XML and using @Parameters in our Test.
+-----------------------------------------------------------------------------
+
+@DataProvider- helps in parametrization and reading from excel and executing 
+the test cases for the excel data 
+-----------------------------------------------------------------------------
